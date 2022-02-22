@@ -1,0 +1,44 @@
+/*Reseteo*/
+
+*{
+   margin: 0;
+   padding: 0;
+}
+
+body{
+   background-color: yellow;
+}
+
+/*Estilos de caja*/
+.caja{
+   background-color: red;
+   width: 200px;
+   height: 200px;
+   font-size: 2rem;
+   color: white;
+
+   /*↓Centrar contenido de caja↓*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+/*Estilos al contenedor de las cajas*/
+.contenedorDeCajas{
+   margin: 30px 0 30px 0;
+   display: flex;/*Por defecto se colocan una al lado
+   de la otra*/
+   justify-content: center;
+   gap: 50px; /*Espacio*/
+}
+
+/*Media queries:*/
+
+@media (max-width: 800px) {
+   .contenedorDeCajas{
+      flex-direction: column;/*Coloca las cajas una debajo de la otra
+      en dispositivos menores a 800px*/
+      align-items: center;/*Centralizo las cajas*/
+   }
+}
